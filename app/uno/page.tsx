@@ -1,10 +1,12 @@
-import Link from 'next/link';
+"use client";
+import { useAppContext } from "../contexto/AppContext";
 import Props from './props';
 export default function Uno() {
+  const { nombre } = useAppContext();
   return (
     <div>
       uno
-      <Props nombre="Holi"/>
+      <Props nombre={nombre}/>
     </div>
   );
 }
